@@ -51,9 +51,10 @@ if(loading){
     return (
      <>
         {data.name?<div className='main '
-        // style={{
-        //     backgroundImage:`url(${})`
-        // }}
+        style={{
+        
+           backgroundImage:'none'
+        }}
         >
          <h2 className=' text-slate-100  text-2xl center font-semibold mb-2'>Weather App</h2>
          <div>
