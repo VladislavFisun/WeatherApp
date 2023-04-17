@@ -4,7 +4,8 @@ import { ApiWeatherData } from "../Types/Types";
 type ApiWeatherState={
     list:any,
     error:boolean,
-    loading:boolean
+    loading:boolean,
+    color:string
 }
 type EmptyObject = {
     [K in any] : never
@@ -12,7 +13,8 @@ type EmptyObject = {
 const initialState:ApiWeatherState={
     list:[],
     error:false,
-    loading:false
+    loading:false,
+    color:''
 }
 
 const ApiWeatherSlice = createSlice({
@@ -27,6 +29,9 @@ const ApiWeatherSlice = createSlice({
      },
      getLoading(state,action){
         state.loading=action.payload
+     },
+     uploadColor(state,action){
+        state.color=action.payload
      }
 
     },
@@ -35,4 +40,4 @@ const ApiWeatherSlice = createSlice({
 
 export default ApiWeatherSlice.reducer
 
-export const {updateState,getError,getLoading} = ApiWeatherSlice.actions
+export const {updateState,getError,getLoading,uploadColor} = ApiWeatherSlice.actions

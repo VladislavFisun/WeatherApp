@@ -43,7 +43,7 @@ const WeatherContentField = () => {
 // let day=
 
 if(loading){
-    return <LoadingComponent/>
+    return <div className='main  backdrop-blur-sm bg-white/30' style={{backgroundImage:'none'}}><LoadingComponent   /></div>
 }
 
 
